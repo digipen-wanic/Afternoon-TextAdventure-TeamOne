@@ -1,1 +1,1 @@
-Frank wasn't here!
+This is the Readme file for the text adventure game.

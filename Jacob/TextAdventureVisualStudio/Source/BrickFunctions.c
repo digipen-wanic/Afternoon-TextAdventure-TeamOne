@@ -20,7 +20,7 @@ This file defines the functions to create a specific item, the "brick".
 
 
 /* Helper: The action performed when the brick is taken. */
-void Brick_Take(CommandContext context, GameState* gameState, WorldData* worldData)
+void PeanutButter_Take(CommandContext context, GameState* gameState, WorldData* worldData)
 {
 	/* avoid W4 warnings on unused parameters - this function conforms to a function typedef */
 	UNREFERENCED_PARAMETER(context);
@@ -28,16 +28,16 @@ void Brick_Take(CommandContext context, GameState* gameState, WorldData* worldDa
 	UNREFERENCED_PARAMETER(worldData);
 
 	/* Give the user a hint about how the brick might be used, whenever it is picked up. */
-	printf("The brick feels heavy in your hand.\n");
+	printf("the peanut butter looks tasty.\n");
 }
 
 
 /* Helper: The action performed when the brick is used. */
-void Brick_Use(CommandContext context, GameState* gameState, WorldData* worldData)
+void PeanutButter_Use(CommandContext context, GameState* gameState, WorldData* worldData)
 {
 	Room* room; /* The current room */
 	ItemList** roomItemsPtr; /* The list of items in the current room */
-	Item* brick; /* The brick in the player's inventory */
+	Item* PeanutButter; /* The brick in the player's inventory */
 
 	/* safety check on the parameters */
 	if ((gameState == NULL) || (worldData == NULL))
@@ -49,7 +49,7 @@ void Brick_Use(CommandContext context, GameState* gameState, WorldData* worldDat
 	if (context != CommandContext_Item_Inventory)
 	{
 		/* the user doesn't have the brick - inform the user of the problem and take no action */
-		printf("You must have the brick before you can use it.\n");
+		printf("The dog doesnt seem interested in you.\n");
 		return;
 	}
 
@@ -57,7 +57,7 @@ void Brick_Use(CommandContext context, GameState* gameState, WorldData* worldDat
 	if (gameState->currentRoomIndex != 0)
 	{
 		/* we are not in the right room - inform the user of the problem and take no action */
-		printf("You cannot use the brick here.\n");
+		printf("you look at the peanut butter and decide you dont want to eat it.\n");
 		return;
 	}
 
@@ -87,7 +87,7 @@ void Brick_Use(CommandContext context, GameState* gameState, WorldData* worldDat
 		gameState->inventory = ItemList_Remove(gameState->inventory, brick);
 
 		/* Tell the user what they did */
-		printf("You smash the cage open with the brick, and the brick crumbles.  You can now reach the small egg inside.\n");
+		printf("you gave the peanut butter to the dog, the dog enjoys it and joins you own your quest!.\n");
 
 		/* Add to the player's score */
 		GameState_ChangeScore(gameState, 10);
@@ -109,5 +109,5 @@ Item* Brick_Build()
 {
 	/* Create a "brick" item, using the functions defined in this file */
 	return Item_Create("brick", "A small red brick of indeterminate origin", true, Brick_Use, Brick_Take, NULL);
-	return Item_Create("peanutButter", "A small amount of peanut butter, its tastes good.", true, PeanutButter_Use,PeanutButter_Take , NULL);
+	return Item_Create("peanutButter", "A small amount of peanut butter.", true, PeanutButter_Use,PeanutButter_Take , NULL);
 }

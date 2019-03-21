@@ -78,6 +78,7 @@ Room* Room1_Build()
 	"This is room 1.  There is a large mirror here, and it shimmers as you approach.\n" */
 	room = Room_Create("The building is completely empty expept for the vault. \n");
 	/* TODO BASIC: Add exit shortcuts for "through mirror" and "mirror" */
+	Room_AddRoomExit(room, "south", 3);
 
 	/* TODO REQUIRED: Add an Exit "south" back to Room 0 */
 	/* TODO BASIC: Add room exit shortcut for "s" */
@@ -121,8 +122,7 @@ Room* Room3_Build()
 	Room_AddRoomExit(room, "east", 4);
 	Room_AddRoomExit(room, "west", 2);
 	/* TODO BASIC: Add exit shortcuts for "e" and "crack" */
-	ItemList_AddItem(Room_GetItemList(room), ExitDoor_Build());
-	ItemList_AddItem(Room_GetItemList(room), ExitDoor_Build());
+	ItemList_AddItem(Room_GetItemList(room), Robot_Build());
 	/* TODO REQUIRED: Add a gold piece to the list of items in the room */
 
 	/* return the new room */

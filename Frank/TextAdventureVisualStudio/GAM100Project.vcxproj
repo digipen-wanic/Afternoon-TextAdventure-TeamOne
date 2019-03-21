@@ -118,6 +118,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CommandListFactory.c" />
+    <ClCompile Include="GlassFunctions.cpp" />
     <ClCompile Include="main.c" />
     <ClCompile Include="Source\BrickFunctions.c" />
     <ClCompile Include="Source\CommandHandler.c" />

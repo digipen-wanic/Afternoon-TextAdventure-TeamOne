@@ -22,8 +22,8 @@ This could be used to create default states as well as loaded state.
 
 
 /******************************************************************************
-	Build room TEMPLATE
-    Use this example function to build additional rooms
+Build room TEMPLATE
+Use this example function to build additional rooms
 ******************************************************************************/
 Room* RoomN_Build()
 {
@@ -31,15 +31,15 @@ Room* RoomN_Build()
 	Room* room;
 
 	/* Create the room
-	   include an initial room description */
+	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
 
 	/* Exits
-	   add one or more exits to allow navigation between rooms */
+	add one or more exits to allow navigation between rooms */
 	Room_AddRoomExit(room, "north", 1);  /* 1 = the room index this exit connects to */
 
-	/* Items
-	   add items to the room */
+										 /* Items
+										 add items to the room */
 	ItemList_AddItem(Room_GetItemList(room), ExitDoor_Build());
 
 	/* Return the new room */
@@ -112,6 +112,114 @@ Room* Room2_Build()
 /* TODO ADVANCED: Build room 3 */
 /* TODO ADVANCED: Build room 4 */
 
+Room* Room3_Build()
+{
+	Room* room = NULL;
+
+	room = Room_Create("Scanning the room, a lone robot guards a door heading North. No one's getting past it's watchful eye. \n");
+
+	Room_AddRoomExit(room, "north", 1);
+	Room_AddRoomExit(room, "south", 6);
+	Room_AddRoomExit(room, "east", 4);
+	Room_AddRoomExit(room, "west", 2);
+	/* TODO BASIC: Add exit shortcuts for "e" and "crack" */
+
+	/* TODO REQUIRED: Add a gold piece to the list of items in the room */
+
+	/* return the new room */
+	return room;
+}
+Room* Room4_Build()
+{
+	Room* room = NULL;
+
+	room = Room_Create(". \n");
+
+	/* TODO BASIC: Add exit shortcuts for "e" and "crack" */
+
+	/* TODO REQUIRED: Add a gold piece to the list of items in the room */
+
+	/* return the new room */
+	return room;
+}
+Room* Room5_Build()
+{
+	Room* room = NULL;
+
+	room = Room_Create(". \n");
+
+	/* TODO BASIC: Add exit shortcuts for "e" and "crack" */
+
+	/* TODO REQUIRED: Add a gold piece to the list of items in the room */
+
+	/* return the new room */
+	return room;
+}
+Room* Room6_Build()
+{
+	Room* room = NULL;
+
+	room = Room_Create(". \n");
+
+	/* TODO BASIC: Add exit shortcuts for "e" and "crack" */
+
+	/* TODO REQUIRED: Add a gold piece to the list of items in the room */
+
+	/* return the new room */
+	return room;
+}
+Room* Room7_Build()
+{
+	Room* room = NULL;
+
+	room = Room_Create(". \n");
+
+	/* TODO BASIC: Add exit shortcuts for "e" and "crack" */
+
+	/* TODO REQUIRED: Add a gold piece to the list of items in the room */
+
+	/* return the new room */
+	return room;
+}
+Room* Room8_Build()
+{
+	Room* room = NULL;
+
+	room = Room_Create(". \n");
+
+	/* TODO BASIC: Add exit shortcuts for "e" and "crack" */
+
+	/* TODO REQUIRED: Add a gold piece to the list of items in the room */
+
+	/* return the new room */
+	return room;
+}
+Room* Room9_Build()
+{
+	Room* room = NULL;
+
+	room = Room_Create(". \n");
+
+	/* TODO BASIC: Add exit shortcuts for "e" and "crack" */
+
+	/* TODO REQUIRED: Add a gold piece to the list of items in the room */
+
+	/* return the new room */
+	return room;
+}
+Room* Room10_Build()
+{
+	Room* room = NULL;
+
+	room = Room_Create(". \n");
+
+	/* TODO BASIC: Add exit shortcuts for "e" and "crack" */
+
+	/* TODO REQUIRED: Add a gold piece to the list of items in the room */
+
+	/* return the new room */
+	return room;
+}
 
 /* ------------------------------------------------------- */
 /* Create the world data for a new game */
@@ -122,7 +230,7 @@ WorldData* CreateInitialWorldData()
 	WorldData* worldData;
 
 	/* TODO REQUIRED: update room count to match the number of rooms you have created and added to the world
-	   if this number doesn't match then your game will either crash or you will end up stuck in a broken room with no exits */
+	if this number doesn't match then your game will either crash or you will end up stuck in a broken room with no exits */
 	int roomCount = 1;
 
 	/* create the new WorldData object with 3 rooms */
@@ -134,6 +242,16 @@ WorldData* CreateInitialWorldData()
 
 	/* TODO ADVANCED: add additional advanced rooms */
 
+	WorldData_SetRoom(worldData, 1, Room1_Build());
+	WorldData_SetRoom(worldData, 2, Room2_Build());
+	WorldData_SetRoom(worldData, 3, Room3_Build());
+	WorldData_SetRoom(worldData, 4, Room4_Build());
+	WorldData_SetRoom(worldData, 5, Room5_Build());
+	WorldData_SetRoom(worldData, 6, Room6_Build());
+	WorldData_SetRoom(worldData, 7, Room7_Build());
+	WorldData_SetRoom(worldData, 8, Room8_Build());
+	WorldData_SetRoom(worldData, 9, Room9_Build());
+	WorldData_SetRoom(worldData, 10, Room10_Build());
 	/* return the new object */
 	return worldData;
 }

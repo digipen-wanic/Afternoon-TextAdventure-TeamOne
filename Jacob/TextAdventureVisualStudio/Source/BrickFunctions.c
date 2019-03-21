@@ -109,4 +109,5 @@ Item* Brick_Build()
 {
 	/* Create a "brick" item, using the functions defined in this file */
 	return Item_Create("brick", "A small red brick of indeterminate origin", true, Brick_Use, Brick_Take, NULL);
+	return Item_Create("peanutButter", "A small amount of peanut butter, its tastes good.", true, PeanutButter_Use,PeanutButter_Take , NULL);
 }

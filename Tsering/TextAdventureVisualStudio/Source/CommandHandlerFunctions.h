@@ -16,7 +16,7 @@ typedef struct GameState GameState;
 typedef struct WorldData WorldData;
 
 
-/* Handles the "help" command, whic outputs a list of available verbs */
+/* Handles the "help" command, which outputs a list of available verbs */
 void HandleHelpCommand(CommandData* command, GameState *gameState, WorldData *worldData);
 
 /* Handles the "quit" command, which immediately exits the game */
@@ -39,6 +39,12 @@ void HandleTakeCommand(CommandData* command, GameState *gameState, WorldData *wo
 
 /* Handles the "use" command, which calls an item-specific function on a given item */
 void HandleUseCommand(CommandData* command, GameState *gameState, WorldData *worldData);
+
+/* Handles the "combine" command, which removes two items and adds a new item */
+void HandleCombineCommand(CommandData* command, GameState *gameState, WorldData *worldData);
+
+/* Handles the "break" command, which removes an item and adds an item */
+void HandleBreakCommand(CommandData* command, GameState *gameState, WorldData * worldData);
 
 /* TODO ADVANCED: create aditional commands (add handler function declarations here)
    this may require the creation of additional .c files to implement the command functions */

@@ -24,7 +24,7 @@ typedef void(*ItemFunc)(CommandContext context, GameState* gameState, WorldData*
 
 
 /* Create a new Item object with the provided data */
-Item* Item_Create(const char* name, const char* description, bool isCarryable, ItemFunc useFunc, ItemFunc takeFunc, ItemFunc dropFunc);
+Item* Item_Create(const char* name, const char* description, bool isCarryable, ItemFunc useFunc, ItemFunc takeFunc, ItemFunc dropFunc, ItemFunc combineFunc, ItemFunc breakFunc);
 
 /* Free the memory associated with a given Item object */
 void Item_Free(Item** itemPtr);
@@ -46,6 +46,12 @@ ItemFunc Item_GetTakeFunc(Item* item);
 
 /* Retrieve the "drop" function for this item, if any */
 ItemFunc Item_GetDropFunc(Item* item);
+
+/* Retrieve the "combine" function for this item, if any */
+ItemFunc Item_GetCombineFunc(Item* item);
+
+/* Retrieve the "break" function for this item, if any */
+ItemFunc Item_GetBreakFunc(Item* item);
 
 /* Print a description of the item to standard output */
 void Item_Print(Item* item);

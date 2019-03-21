@@ -76,6 +76,12 @@
     <ClCompile Include="Source\WorldData.c">
       <Filter>World Data</Filter>
     </ClCompile>
+    <ClCompile Include="CombineCommandHandler.c">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="BreakCommandHandler.c">
+      <Filter>Commands</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\CommandContext.h">
@@ -170,6 +176,12 @@
     </ClInclude>
     <ClInclude Include="Source\WorldDataFactory.h">
       <Filter>World Data</Filter>
+    </ClInclude>
+    <ClInclude Include="CombineCommandHandler.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="BreakCommandHandler.h">
+      <Filter>Commands</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

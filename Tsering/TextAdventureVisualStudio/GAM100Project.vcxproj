@@ -84,6 +84,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BreakCommandHandler.h" />
+    <ClInclude Include="CombineCommandHandler.h" />
     <ClInclude Include="Source\BrickFunctions.h" />
     <ClInclude Include="Source\CommandContext.h" />
     <ClInclude Include="Source\CommandData.h" />
@@ -117,6 +119,8 @@
     <ClInclude Include="Source\WorldDataFactory.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BreakCommandHandler.c" />
+    <ClCompile Include="CombineCommandHandler.c" />
     <ClCompile Include="CommandListFactory.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="Source\BrickFunctions.c" />

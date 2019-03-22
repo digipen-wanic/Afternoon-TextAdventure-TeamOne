@@ -76,10 +76,13 @@
     <ClCompile Include="Source\WorldData.c">
       <Filter>World Data</Filter>
     </ClCompile>
-    <ClCompile Include="GlassFunctions.cpp">
+    <ClCompile Include="Source\PeanutButterFunctions.c">
       <Filter>World Data\Item Functions</Filter>
     </ClCompile>
-    <ClCompile Include="WatchPartFunctions.cpp">
+    <ClCompile Include="WatchPartFunctions.c">
+      <Filter>World Data\Item Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="GlassFunctions.c">
       <Filter>World Data\Item Functions</Filter>
     </ClCompile>
   </ItemGroup>
@@ -181,6 +184,9 @@
       <Filter>World Data\Item Functions</Filter>
     </ClInclude>
     <ClInclude Include="WatchPartFunctions.h">
+      <Filter>World Data\Item Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\PeanutButterFunctions.h">
       <Filter>World Data\Item Functions</Filter>
     </ClInclude>
   </ItemGroup>

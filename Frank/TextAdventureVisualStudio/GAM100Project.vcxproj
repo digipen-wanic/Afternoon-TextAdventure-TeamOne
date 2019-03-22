@@ -107,6 +107,7 @@
     <ClInclude Include="Source\Item.h" />
     <ClInclude Include="Source\ItemList.h" />
     <ClInclude Include="Source\LookCommandHandler.h" />
+    <ClInclude Include="Source\PeanutButterFunctions.h" />
     <ClInclude Include="Source\QuitCommandHandler.h" />
     <ClInclude Include="Source\Room.h" />
     <ClInclude Include="Source\RoomExit.h" />
@@ -120,7 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CommandListFactory.c" />
-    <ClCompile Include="GlassFunctions.cpp" />
+    <ClCompile Include="GlassFunctions.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="Source\BrickFunctions.c" />
     <ClCompile Include="Source\CommandHandler.c" />
@@ -139,6 +140,7 @@
     <ClCompile Include="Source\Item.c" />
     <ClCompile Include="Source\ItemList.c" />
     <ClCompile Include="Source\LookCommandHandler.c" />
+    <ClCompile Include="Source\PeanutButterFunctions.c" />
     <ClCompile Include="Source\QuitCommandHandler.c" />
     <ClCompile Include="Source\Room.c" />
     <ClCompile Include="Source\RoomExit.c" />
@@ -146,7 +148,7 @@
     <ClCompile Include="Source\TakeCommandHandler.c" />
     <ClCompile Include="Source\UseCommandHandler.c" />
     <ClCompile Include="Source\WorldData.c" />
-    <ClCompile Include="WatchPartFunctions.cpp" />
+    <ClCompile Include="WatchPartFunctions.c" />
     <ClCompile Include="WorldDataFactory.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

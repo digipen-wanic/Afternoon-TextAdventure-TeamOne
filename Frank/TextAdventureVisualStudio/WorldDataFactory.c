@@ -18,6 +18,9 @@ This could be used to create default states as well as loaded state.
 #include "BrickFunctions.h" /* Brick_Build */
 #include "GoldPieceFunctions.h" /* GoldPiece_Build */
 #include "ExitDoorFunctions.h" /* ExitDoor_Build */
+#include "CarFunctions.h"
+#include "McNoodlesFunctions.h"
+#include "CarFunctions.h"
 
 
 

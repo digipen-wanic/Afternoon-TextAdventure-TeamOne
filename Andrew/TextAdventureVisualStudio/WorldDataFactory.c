@@ -46,6 +46,33 @@ Room* RoomN_Build()
 	return room;
 }
 
+/* This is the room for the dog and the house */
+Room* Room5_Build()
+{
+	/* Pre-declare a room pointer which we will use to build the new room */
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("You see a destroyed house and a large dog sitting infront of it\n");
+
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 2);  /* 2 = the room index this exit connects to */
+	/* Exits
+		add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "east", 6);  /* 6 = the room index this exit connects to */
+	/* Exits
+		add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "south", 8);  /* 8 = the room index this exit connects to */
+
+	/* Items
+		add items to the room */
+	ItemList_AddItem(Room_GetItemList(room), Dog_Build());
+
+	/* Return the new room */
+	return room;
+}
 
 /* TODO REQUIRED: Build room 0 */
 Room* Room0_Build()

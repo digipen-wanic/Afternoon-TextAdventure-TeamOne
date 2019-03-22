@@ -21,6 +21,7 @@ This could be used to create default states as well as loaded state.
 #include "CarFunctions.h"
 #include "McNoodlesFunctions.h"
 #include "CarFunctions.h"
+#include "RobotFunctions.h"
 
 
 
@@ -125,7 +126,7 @@ Room* Room3_Build()
 	Room_AddRoomExit(room, "east", 3);
 	Room_AddRoomExit(room, "west", 1);
 	/* TODO BASIC: Add exit shortcuts for "e" and "crack" */
-	/*ItemList_AddItem(Room_GetItemList(room), Robot_Build(());*/
+	ItemList_AddItem(Room_GetItemList(room), Robot_Build());
 	/* TODO REQUIRED: Add a gold piece to the list of items in the room */
 
 	/* return the new room */

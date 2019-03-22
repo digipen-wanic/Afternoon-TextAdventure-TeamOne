@@ -21,4 +21,60 @@ an item-specific function on a given item
 
 void HandleCombineCommand(CommandData * command, GameState * gameState, WorldData * worldData)
 {
+	Item* CombinedItem; /* the item to be combined */
+	Room* room; /* the current room */
+	ItemList** roomItemsPtr; /* the list of items in the current room */
+	ItemFunc useFunc; /* The function to be called for the given item when it is combined */
+	CommandContext useContext = CommandContext_User; /* the context used for the "use" function*/
+
+													 /* safety check on the parameters */
+	if ((command == NULL) || (command->noun == NULL) || (gameState == NULL) || (worldData == NULL))
+	{
+		return;  /* take no action if the parameters are invalid */
+	}
+
+	/* search for the item in the user's inventory, which takes precedence over the current room */
+	CombinedItem = ItemList_FindItem(gameState->inventory, command->noun);
+	if (CombinedItem != NULL)
+	{
+		/* the item was found in the user's inventory, so we're going to use the Inventory context*/
+		useContext = CommandContext_Item_Inventory;
+	}
+	else
+	{
+		/* retrieve the current room */
+		room = WorldData_GetRoom(worldData, gameState->currentRoomIndex);
+		/* retrieve the set of items in the current room */
+		roomItemsPtr = Room_GetItemList(room);
+		/* retrieve the item from the list of items in teh current room */
+		if (roomItemsPtr != NULL)
+		{
+			CombinedItem = ItemList_FindItem(*roomItemsPtr, command->noun);
+		}
+		if (CombinedItem != NULL)
+		{
+			/* the item was found in the room, so we're going to use the Room context */
+			useContext = CommandContext_Item_Room;
+		}
+	}
+
+	/* check if the item has been found anywhere */
+	if (CombinedItem == NULL)
+	{
+		/* the item was not found - inform the user of the problem and take no action */
+		printf("You do not see a %s here.", command->noun);
+		return;
+	}
+
+	/* get the "use" function for this item, if any */
+	useFunc = Item_GetUseFunc(CombinedItem);
+	if (useFunc == NULL)
+	{
+		/* no "use" function was defined, so the item cannot be used - inform the user of the problem and take no action*/
+		printf("You cannot use a %s here.", command->noun);
+		return;
+	}
+
+	/* call the "use" function with the appropriate context */
+	useFunc(useContext, gameState, worldData);
 }

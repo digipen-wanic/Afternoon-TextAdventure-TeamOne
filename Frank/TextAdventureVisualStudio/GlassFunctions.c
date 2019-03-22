@@ -12,6 +12,7 @@ This file defines the functions to create a specific item, the "exit door".
 #include "GameState.h" /* struct GameState, GameState_EndGame */
 #include "ItemList.h" /* ItemList_FindItem */
 #include "Item.h" /* Item_Create */
+#include "CrunchyPeanutButterFunctions.h" /* Function declarations */
 
 typedef struct WorldData WorldData;
 
@@ -42,8 +43,8 @@ void Glass_Combine(CommandContext context, GameState* gameState, WorldData* worl
 
 	ItemList_Remove(gameState->inventory, glass);
 	ItemList_Remove(gameState->inventory, peanutButter);
-	/*ItemList_Add(gameState->inventory, chunkyButter_Build());*/
-	printf("You got the chunky butter! \n");
+	ItemList_Add(gameState->inventory, CrunchyPeanutButter_Build());
+	printf("You got the crunchy peanut butter! \n");
 }
 
 

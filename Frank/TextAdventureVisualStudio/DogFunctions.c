@@ -9,7 +9,7 @@ This file defines the functions to create a specific item, the "dog".
 
 ******************************************************************************/
 #include "stdafx.h" /* UNREFERENCED_PARAMETER, NULL*/
-#include "BrickFunctions.h" /* Function declarations */
+#include "DogFunctions.h" /* Function declarations */
 #include "GameState.h" /* struct GameState, GameState_ChangeScore */
 #include "GameFlags.h" /* GameFlags_IsInList */
 #include "WorldData.h" /* WorldData_GetRoom */
@@ -53,7 +53,7 @@ void Dog_Use(CommandContext context, GameState* gameState, WorldData* worldData)
 	}
 
 	/* check if we're in the right room to use the item */
-	if (gameState->currentRoomIndex == 3)
+	if (gameState->currentRoomIndex != 3)
 	{
 		/* we are not in the right room - inform the user of the problem and take no action */
 		printf("You cannot use the dog here.\n");

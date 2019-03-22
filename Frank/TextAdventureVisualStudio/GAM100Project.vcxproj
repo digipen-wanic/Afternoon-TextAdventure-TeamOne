@@ -84,7 +84,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CarFunctions.h" />
+    <ClInclude Include="DogFunctions.h" />
     <ClInclude Include="GlassFunctions.h" />
+    <ClInclude Include="McNoodlesFunctions.h" />
     <ClInclude Include="Source\BrickFunctions.h" />
     <ClInclude Include="Source\CommandContext.h" />
     <ClInclude Include="Source\CommandData.h" />
@@ -120,9 +123,12 @@
     <ClInclude Include="WatchPartFunctions.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CarFunctions.c" />
     <ClCompile Include="CommandListFactory.c" />
+    <ClCompile Include="DogFunctions.c" />
     <ClCompile Include="GlassFunctions.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="McNoodlesFunctions.c" />
     <ClCompile Include="Source\BrickFunctions.c" />
     <ClCompile Include="Source\CommandHandler.c" />
     <ClCompile Include="Source\CommandList.c" />

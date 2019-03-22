@@ -156,30 +156,49 @@ Room* Room5_Build()
 }
 Room* Room6_Build()
 {
-	Room* room = NULL;
+	/* Pre-declare a room pointer which we will use to build the new room */
+	Room* room;
 
-	room = Room_Create(". \n");
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("You see the remains of an old asphalt road. A ruined car is parked on the curb.\n");
 
-	/* TODO BASIC: Add exit shortcuts for "e" and "crack" */
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 3);  /* 1 = the room index this exit connects to */
+	Room_AddRoomExit(room, "east", 7);
+	Room_AddRoomExit(room, "west", 5);
+	Room_AddRoomExit(room, "south", 9);
 
-	/* TODO REQUIRED: Add a gold piece to the list of items in the room */
+	/* Items add items to the room */
+	ItemList_AddItem(Room_GetItemList(room), Car_Build());
 
-	/* return the new room */
+	/* Return the new room */
 	return room;
 }
+
 Room* Room7_Build()
 {
-	Room* room = NULL;
+	/* Pre-declare a room pointer which we will use to build the new room */
+	Room* room;
 
-	room = Room_Create(". \n");
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("There's a McNoodles™ restauraunt built here. And just when you got their stupid jingle out of your head...\n");
 
-	/* TODO BASIC: Add exit shortcuts for "e" and "crack" */
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 4);  /* 1 = the room index this exit connects to */
+	Room_AddRoomExit(room, "west", 6);
+	Room_AddRoomExit(room, "south", 10);
 
-	/* TODO REQUIRED: Add a gold piece to the list of items in the room */
+	/* Items add items to the room */
+	ItemList_AddItem(Room_GetItemList(room), Mcnoodles_Build());
 
-	/* return the new room */
+	/* Return the new room */
 	return room;
 }
+
 Room* Room8_Build()
 {
 	Room* room = NULL;

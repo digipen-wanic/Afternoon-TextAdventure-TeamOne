@@ -22,6 +22,9 @@ This could be used to create default states as well as loaded state.
 #include "McNoodlesFunctions.h"
 #include "CarFunctions.h"
 #include "RobotFunctions.h"
+#include "PlaygroundFunctions.h"
+#include "PeanutButterFunctions.h"
+#include "CrunchyPeanutButterFunctions.h"
 
 
 
@@ -231,19 +234,25 @@ Room* Room9_Build()
 	/* return the new room */
 	return room;
 }
+/* This room was done by Andrew */
 Room* Room10_Build()
 {
 	Room* room = NULL;
 
-	room = Room_Create(". \n");
+	room = Room_Create("You are in an old pet store and you can only see a singular jar of peanut butter on a shelf\n");
 
-	/* TODO BASIC: Add exit shortcuts for "e" and "crack" */
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 7);
+	Room_AddRoomExit(room, "west", 9);
 
-	/* TODO REQUIRED: Add a gold piece to the list of items in the room */
+	/* Items add items to the room */
+	ItemList_AddItem(Room_GetItemList(room), PeanutButter_build());
 
 	/* return the new room */
 	return room;
 }
+
 
 /* ------------------------------------------------------- */
 /* Create the world data for a new game */

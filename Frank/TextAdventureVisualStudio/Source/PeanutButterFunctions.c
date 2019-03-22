@@ -14,6 +14,7 @@ Brief Description: the file to add and give functions to the peanutbutter item
 #include "ItemList.h" /* ItemList_FindItem, ItemList_Remove, ItemList_Add */
 #include "Item.h" /* Item_Create */
 #include "PeanutButterFunctions.h" /* PeanutButter_Build */
+#include "CrunchyPeanutButterFunctions.h" /* PeanutButter_Build */
 
 
 void PeanutButter_Take(CommandContext context, GameState* gameState, WorldData* worldData)
@@ -83,7 +84,7 @@ void PeanutButter_Combine(CommandContext context, GameState* gameState, WorldDat
 
 	ItemList_Remove(gameState->inventory, glass);
 	ItemList_Remove(gameState->inventory, peanutButter);
-	ItemList_Add(gameState->inventory, chunkyButter_Build());
+	ItemList_Add(gameState->inventory, CrunchyPeanutButter_Build());
 	printf("You got the crunchy peanut butter! \n");
 }
 

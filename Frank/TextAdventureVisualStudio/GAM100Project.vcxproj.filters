@@ -94,9 +94,6 @@
     <ClCompile Include="CarFunctions.c">
       <Filter>World Data\Item Functions</Filter>
     </ClCompile>
-    <ClCompile Include="CrunchyPeanutButterFunctions.c">
-      <Filter>World Data\Item Functions</Filter>
-    </ClCompile>
     <ClCompile Include="RobotFunctions.c">
       <Filter>World Data\Item Functions</Filter>
     </ClCompile>
@@ -105,6 +102,12 @@
     </ClCompile>
     <ClCompile Include="BreakCommandHandler.c">
       <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaygroundFunctions.c">
+      <Filter>World Data\Item Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CrunchyPeanutButterFunctions.c">
+      <Filter>World Data\Item Functions</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -219,9 +222,6 @@
     <ClInclude Include="CarFunctions.h">
       <Filter>World Data\Item Functions</Filter>
     </ClInclude>
-    <ClInclude Include="CrunchyPeanutButterFunctions.h">
-      <Filter>World Data\Item Functions</Filter>
-    </ClInclude>
     <ClInclude Include="RobotFunctions.h">
       <Filter>World Data\Item Functions</Filter>
     </ClInclude>
@@ -230,6 +230,12 @@
     </ClInclude>
     <ClInclude Include="BreakCommandHandler.h">
       <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaygroundFunctions.h">
+      <Filter>World Data\Item Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CrunchyPeanutButterFunctions.h">
+      <Filter>World Data\Item Functions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

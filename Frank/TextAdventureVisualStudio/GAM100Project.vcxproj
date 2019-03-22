@@ -89,8 +89,8 @@
     <ClInclude Include="CombineCommandHandler.h" />
     <ClInclude Include="DogFunctions.h" />
     <ClInclude Include="GlassFunctions.h" />
-    <ClInclude Include="CrunchyPeanutButterFunctions.h" />
     <ClInclude Include="McNoodlesFunctions.h" />
+    <ClInclude Include="PlaygroundFunctions.h" />
     <ClInclude Include="RobotFunctions.h" />
     <ClInclude Include="Source\BrickFunctions.h" />
     <ClInclude Include="Source\CommandContext.h" />
@@ -100,6 +100,7 @@
     <ClInclude Include="Source\CommandList.h" />
     <ClInclude Include="Source\CommandListFactory.h" />
     <ClInclude Include="Source\CommandTypes.h" />
+    <ClInclude Include="Source\CrunchyPeanutButterFunctions.h" />
     <ClInclude Include="Source\DropCommandHandler.h" />
     <ClInclude Include="Source\EggFunctions.h" />
     <ClInclude Include="Source\ExitDoorFunctions.h" />
@@ -131,15 +132,16 @@
     <ClCompile Include="CarFunctions.c" />
     <ClCompile Include="CombineCommandHandler.c" />
     <ClCompile Include="CommandListFactory.c" />
-    <ClCompile Include="CrunchyPeanutButterFunctions.c" />
     <ClCompile Include="DogFunctions.c" />
     <ClCompile Include="GlassFunctions.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="McNoodlesFunctions.c" />
+    <ClCompile Include="PlaygroundFunctions.c" />
     <ClCompile Include="RobotFunctions.c" />
     <ClCompile Include="Source\BrickFunctions.c" />
     <ClCompile Include="Source\CommandHandler.c" />
     <ClCompile Include="Source\CommandList.c" />
+    <ClCompile Include="Source\CrunchyPeanutButterFunctions.c" />
     <ClCompile Include="Source\DropCommandHandler.c" />
     <ClCompile Include="Source\EggFunctions.c" />
     <ClCompile Include="Source\ExitDoorFunctions.c" />

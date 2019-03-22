@@ -13,7 +13,7 @@ Brief Description: the file to add the playground item
 #include "GameFlags.h"
 #include "Item.h"
 
-Item * PlayGround_build()
+Item * PlayGround_Build()
 {
 	return Item_Create("PlayGround", "A run down playground, just looking at it makes you feel sad and depressed inside.\n", false, NULL, NULL, NULL, NULL, NULL);
 }

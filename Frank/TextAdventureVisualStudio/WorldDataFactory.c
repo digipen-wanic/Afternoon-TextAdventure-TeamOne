@@ -255,7 +255,7 @@ WorldData* CreateInitialWorldData()
 	int roomCount = 10;
 
 	/* create the new WorldData object with 3 rooms */
-	worldData = WorldData_Create("Welcome to Team 1's GAM100 Game!\n\n", roomCount);
+	worldData = WorldData_Create("Welcome to Team One's GAM100 Game!\n\n", roomCount);
 
 	/* build each room and assign them to the world data */
 	/* TODO REQUIRED: add rooms 1 and 2 to the world data */

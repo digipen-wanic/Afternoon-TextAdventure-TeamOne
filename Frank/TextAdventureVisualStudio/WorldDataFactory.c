@@ -122,7 +122,7 @@ Room* Room3_Build()
 	Room_AddRoomExit(room, "east", 4);
 	Room_AddRoomExit(room, "west", 2);
 	/* TODO BASIC: Add exit shortcuts for "e" and "crack" */
-	ItemList_AddItem(Room_GetItemList(room), Robot_Build());
+	/*ItemList_AddItem(Room_GetItemList(room), Robot_Build(());*/
 	/* TODO REQUIRED: Add a gold piece to the list of items in the room */
 
 	/* return the new room */
@@ -230,13 +230,13 @@ WorldData* CreateInitialWorldData()
 
 	/* TODO REQUIRED: update room count to match the number of rooms you have created and added to the world
 	if this number doesn't match then your game will either crash or you will end up stuck in a broken room with no exits */
-	int roomCount = 1;
+	int roomCount = 10;
 
 	/* create the new WorldData object with 3 rooms */
-	worldData = WorldData_Create("Welcome to my GAM100 Game!\n\n", roomCount);
+	worldData = WorldData_Create("Welcome to Team 1's GAM100 Game!\n\n", roomCount);
 
 	/* build each room and assign them to the world data */
-	WorldData_SetRoom(worldData, 0, Room0_Build());
+	WorldData_SetRoom(worldData, 6, Room6_Build());
 	/* TODO REQUIRED: add rooms 1 and 2 to the world data */
 
 	/* TODO ADVANCED: add additional advanced rooms */

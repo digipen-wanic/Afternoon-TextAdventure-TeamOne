@@ -24,5 +24,5 @@ This file defines the functions to create a specific item, the "crunchyPeanutBut
 Item* CrunchyPeanutButter_Build()
 {
 	/* Create a "crunchyPeanutButter" item, using the functions defined in this file */
-	return Item_Create("crunchyPeanutButter", "<add description>", false, NULL, NULL, NULL, NULL, NULL);
+	return Item_Create("crunchy peanut butter", "<add description>", false, NULL, NULL, NULL, NULL, NULL);
 }

@@ -54,7 +54,7 @@ void HandleBreakCommand(CommandData * command, GameState * gameState, WorldData 
 	gameState->inventory = ItemList_Remove(gameState->inventory, brokenItem);
 
 	/* everything has succeeded, so output the result */
-	printf("You have dropped the %s.\n", command->noun);
+	printf("You have broken the %s.\n", command->noun);
 
 	/* get the "drop" function for this item, if any (it is optional) */
 	dropFunc = Item_GetDropFunc(brokenItem);

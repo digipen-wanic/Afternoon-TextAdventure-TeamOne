@@ -54,14 +54,11 @@ void HandleDropCommand(CommandData *command, GameState* gameState, WorldData* wo
 	/* remove the item from inventory and assign the inventory pointer back to the game state */
 	gameState->inventory = ItemList_Remove(gameState->inventory, droppedItem);
 
-	/* add the item to the room's item list */
-	*roomItemPtr = ItemList_Add(*roomItemPtr, droppedItem);
-
 	/* everything has succeeded, so output the result */
 	printf("You have dropped the %s.\n", command->noun);
 
 	/* get the "drop" function for this item, if any (it is optional) */
-	dropFunc = Item_GetDropFunc(droppedItem);
+	dropFunc = Item_GetBreakFunc(droppedItem);
 	if (dropFunc != NULL)
 	{
 		/* call the drop function with the Inventory context, since that's where the item was */

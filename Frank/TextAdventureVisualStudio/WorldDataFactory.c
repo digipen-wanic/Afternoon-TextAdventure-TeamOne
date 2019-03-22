@@ -102,7 +102,7 @@ Room* Room2_Build()
 
 	/* TODO REQUIRED: Call Room_Create with the Room 2 description:
 	"This is room 2.  The room is isolated from the others, but you can see a crack in the east wall, just large enough to get through.\n" */
-	room = Room_Create("you come up to a park, its broken and run down. you also notice a broken playground. you feel slightly depressed\n");
+	room = Room_Create("You come up to a park, its broken and run down. you also notice a broken playground. You feel slightly depressed. \n");
 	/* TODO REQUIRED: Add an Exit "east" to Room 0 */
 	/* TODO BASIC: Add exit shortcuts for "e" and "crack" */
 	Room_AddRoomExit(room, "south", 5);

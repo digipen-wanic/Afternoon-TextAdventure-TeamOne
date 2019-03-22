@@ -230,7 +230,7 @@ WorldData* CreateInitialWorldData()
 
 	/* TODO REQUIRED: update room count to match the number of rooms you have created and added to the world
 	if this number doesn't match then your game will either crash or you will end up stuck in a broken room with no exits */
-	int roomCount = 10;
+	int roomCount = 11;
 
 	/* create the new WorldData object with 3 rooms */
 	worldData = WorldData_Create("Welcome to Team 1's GAM100 Game!\n\n", roomCount);

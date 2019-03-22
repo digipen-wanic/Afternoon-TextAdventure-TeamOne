@@ -1,4 +1,2 @@
-﻿  CommandListFactory.c
-  LINK : C:\Users\frank.bartkus\Desktop\Team_One\trunk\Frank\TextAdventureVisualStudio\Debug\GAM100Project.exe not found or not built by the last incremental link; performing full link
-  GAM100Project.vcxproj -> C:\Users\frank.bartkus\Desktop\Team_One\trunk\Frank\TextAdventureVisualStudio\Debug\GAM100Project.exe
-  GAM100Project.vcxproj -> C:\Users\frank.bartkus\Desktop\Team_One\trunk\Frank\TextAdventureVisualStudio\Debug\GAM100Project.pdb (Partial PDB)
+﻿  WorldDataFactory.c
+LINK : fatal error LNK1104: cannot open file 'C:\Users\frank.bartkus\Desktop\Team_One\trunk\Frank\TextAdventureVisualStudio\Debug\GAM100Project.exe'

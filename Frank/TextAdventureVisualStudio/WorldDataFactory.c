@@ -78,7 +78,7 @@ Room* Room1_Build()
 	"This is room 1.  There is a large mirror here, and it shimmers as you approach.\n" */
 	room = Room_Create("The building is completely empty expept for the vault. \n");
 	/* TODO BASIC: Add exit shortcuts for "through mirror" and "mirror" */
-	Room_AddRoomExit(room, "south", 3);
+	Room_AddRoomExit(room, "south", 2);
 
 	/* TODO REQUIRED: Add an Exit "south" back to Room 0 */
 	/* TODO BASIC: Add room exit shortcut for "s" */
@@ -118,9 +118,9 @@ Room* Room3_Build()
 
 	room = Room_Create("Scanning the area, a lone robot guards a room heading North. No one's getting past it's watchful eye. Whatever it's guarding must be important. \n");
 
-	Room_AddRoomExit(room, "south", 6);
-	Room_AddRoomExit(room, "east", 4);
-	Room_AddRoomExit(room, "west", 2);
+	Room_AddRoomExit(room, "south", 5);
+	Room_AddRoomExit(room, "east", 3);
+	Room_AddRoomExit(room, "west", 1);
 	/* TODO BASIC: Add exit shortcuts for "e" and "crack" */
 	/*ItemList_AddItem(Room_GetItemList(room), Robot_Build(());*/
 	/* TODO REQUIRED: Add a gold piece to the list of items in the room */
@@ -230,27 +230,26 @@ WorldData* CreateInitialWorldData()
 
 	/* TODO REQUIRED: update room count to match the number of rooms you have created and added to the world
 	if this number doesn't match then your game will either crash or you will end up stuck in a broken room with no exits */
-	int roomCount = 11;
+	int roomCount = 10;
 
 	/* create the new WorldData object with 3 rooms */
 	worldData = WorldData_Create("Welcome to Team 1's GAM100 Game!\n\n", roomCount);
 
 	/* build each room and assign them to the world data */
-	WorldData_SetRoom(worldData, 6, Room6_Build());
 	/* TODO REQUIRED: add rooms 1 and 2 to the world data */
 
 	/* TODO ADVANCED: add additional advanced rooms */
 
-	WorldData_SetRoom(worldData, 1, Room1_Build());
-	WorldData_SetRoom(worldData, 2, Room2_Build());
-	WorldData_SetRoom(worldData, 3, Room3_Build());
-	WorldData_SetRoom(worldData, 4, Room4_Build());
-	WorldData_SetRoom(worldData, 5, Room5_Build());
-	WorldData_SetRoom(worldData, 6, Room6_Build());
-	WorldData_SetRoom(worldData, 7, Room7_Build());
-	WorldData_SetRoom(worldData, 8, Room8_Build());
-	WorldData_SetRoom(worldData, 9, Room9_Build());
-	WorldData_SetRoom(worldData, 10, Room10_Build());
+	WorldData_SetRoom(worldData, 0, Room1_Build());
+	WorldData_SetRoom(worldData, 1, Room2_Build());
+	WorldData_SetRoom(worldData, 2, Room3_Build());
+	WorldData_SetRoom(worldData, 3, Room4_Build());
+	WorldData_SetRoom(worldData, 4, Room5_Build());
+	WorldData_SetRoom(worldData, 5, Room6_Build());
+	WorldData_SetRoom(worldData, 6, Room7_Build());
+	WorldData_SetRoom(worldData, 7, Room8_Build());
+	WorldData_SetRoom(worldData, 8, Room9_Build());
+	WorldData_SetRoom(worldData, 9, Room10_Build());
 	/* return the new object */
 	return worldData;
 }

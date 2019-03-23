@@ -1,0 +1,41 @@
+Room* Room8_Build()
+{
+	/* Pre-declare a room pointer which we will use to build the new room */
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("You see a trail of dog poo leading north. Not much else here...\n");
+
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 5);  /* 1 = the room index this exit connects to */
+	Room_AddRoomExit(room, "east", 9);
+
+	/* Items add items to the room 
+	ItemList_AddItem(Room_GetItemList(room), Car_Build()); */
+
+	/* Return the new room */
+	return room;
+}
+Room* Room9_Build()
+{
+	/* Pre-declare a room pointer which we will use to build the new room */
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("There's a shady guy who looks like he's selling some powdered candy. Too bad you don't have any money...\n");
+
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 6);  /* 1 = the room index this exit connects to */
+	Room_AddRoomExit(room, "east", 10);
+	Room_AddRoomExit(room, "west", 8);
+
+	/* Items add items to the room 
+	ItemList_AddItem(Room_GetItemList(room), Car_Build()); */
+
+	/* Return the new room */
+	return room;
+}

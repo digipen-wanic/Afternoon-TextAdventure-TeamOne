@@ -62,6 +62,7 @@ Room* Room0_Build()
 
 	/* TODO REQUIRED: Call Room_Create with the Room 1 description:
 	"This is room 0. It is a display room with a cage in the middle. You can see a jeweled egg inside the cage.  There is a crack in the west wall, but you can't fit through it from this side.\n" */
+	room = Room_Create("");
 
 	/* TODO REQUIRED: Add an Exit "north" to Room 1 */
 	/* TODO BASIC: Add room exit shortcut for "n" */
@@ -86,6 +87,7 @@ Room* Room1_Build()
 	room = Room_Create("The building is completely empty expept for the vault. \n");
 	/* TODO BASIC: Add exit shortcuts for "through mirror" and "mirror" */
 	Room_AddRoomExit(room, "south", 2);
+	Room_AddRoomExit(room, "vault", 10);
 
 	/* TODO REQUIRED: Add an Exit "south" back to Room 0 */
 	/* TODO BASIC: Add room exit shortcut for "s" */
@@ -264,7 +266,7 @@ WorldData* CreateInitialWorldData()
 
 	/* TODO REQUIRED: update room count to match the number of rooms you have created and added to the world
 	if this number doesn't match then your game will either crash or you will end up stuck in a broken room with no exits */
-	int roomCount = 10;
+	int roomCount = 11;
 
 	/* create the new WorldData object with 3 rooms */
 	worldData = WorldData_Create("Welcome to Team One's GAM100 Game!\n\n", roomCount);
@@ -284,6 +286,7 @@ WorldData* CreateInitialWorldData()
 	WorldData_SetRoom(worldData, 7, Room8_Build());
 	WorldData_SetRoom(worldData, 8, Room9_Build());
 	WorldData_SetRoom(worldData, 9, Room10_Build());
+	WorldData_SetRoom(worldData, 10, Room0_Build());
 	/* return the new object */
 	return worldData;
 }

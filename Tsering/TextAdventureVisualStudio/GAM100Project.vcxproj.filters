@@ -76,16 +76,28 @@
     <ClCompile Include="Source\WorldData.c">
       <Filter>World Data</Filter>
     </ClCompile>
-    <ClCompile Include="CombineCommandHandler.c">
-      <Filter>Commands</Filter>
+    <ClCompile Include="Source\PeanutButterFunctions.c">
+      <Filter>World Data\Item Functions</Filter>
     </ClCompile>
-    <ClCompile Include="BreakCommandHandler.c">
-      <Filter>Commands</Filter>
+    <ClCompile Include="WatchPartFunctions.c">
+      <Filter>World Data\Item Functions</Filter>
     </ClCompile>
-    <ClCompile Include="RobotFunctions.c">
+    <ClCompile Include="GlassFunctions.c">
+      <Filter>World Data\Item Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="DogFunctions.c">
+      <Filter>World Data\Item Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="McNoodlesFunctions.c">
+      <Filter>World Data\Item Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="CarFunctions.c">
       <Filter>World Data\Item Functions</Filter>
     </ClCompile>
     <ClCompile Include="CrunchyPeanutButterFunctions.c">
+      <Filter>World Data\Item Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="RobotFunctions.c">
       <Filter>World Data\Item Functions</Filter>
     </ClCompile>
   </ItemGroup>
@@ -183,16 +195,28 @@
     <ClInclude Include="Source\WorldDataFactory.h">
       <Filter>World Data</Filter>
     </ClInclude>
-    <ClInclude Include="CombineCommandHandler.h">
-      <Filter>Commands</Filter>
+    <ClInclude Include="GlassFunctions.h">
+      <Filter>World Data\Item Functions</Filter>
     </ClInclude>
-    <ClInclude Include="BreakCommandHandler.h">
-      <Filter>Commands</Filter>
+    <ClInclude Include="WatchPartFunctions.h">
+      <Filter>World Data\Item Functions</Filter>
     </ClInclude>
-    <ClInclude Include="RobotFunctions.h">
+    <ClInclude Include="Source\PeanutButterFunctions.h">
+      <Filter>World Data\Item Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="DogFunctions.h">
+      <Filter>World Data\Item Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="McNoodlesFunctions.h">
+      <Filter>World Data\Item Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="CarFunctions.h">
       <Filter>World Data\Item Functions</Filter>
     </ClInclude>
     <ClInclude Include="CrunchyPeanutButterFunctions.h">
+      <Filter>World Data\Item Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="RobotFunctions.h">
       <Filter>World Data\Item Functions</Filter>
     </ClInclude>
   </ItemGroup>

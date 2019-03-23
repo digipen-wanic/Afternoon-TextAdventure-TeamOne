@@ -29,7 +29,7 @@ GameState* GameState_Create()
 
 	/* assign empty values to all members */
 	gameState->score = 0;
-	gameState->currentRoomIndex = 0;
+	gameState->currentRoomIndex = 5;
 	gameState->inventory = NULL;
 	gameState->gameFlags = NULL;
 	gameState->isRunning = true;

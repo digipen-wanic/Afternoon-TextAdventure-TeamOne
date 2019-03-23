@@ -1,11 +1,11 @@
 /******************************************************************************
-filename    UseCommandHandler.c
-author      Matthew Picioccio
-DP email    mattpic@digipen.edu
+filename    CombineCommandHandler.c
+author      Tsering Ngoche
+DP email    N/A
 course      GAM100 ** Do not use this code in your team project
 
 Brief Description:
-This file defines functions that handle the "use" user command, which calls
+This file defines functions that handle the "combine" user command, which calls
 an item-specific function on a given item
 
 ******************************************************************************/

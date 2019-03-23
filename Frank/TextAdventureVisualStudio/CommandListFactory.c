@@ -73,6 +73,10 @@ CommandList* CreateCommandList()
 	/* TODO ADVANCED: create aditional commands
 	this should require the creation of additional .c files to implement the command functions */
 
+	CommandList_Add(cmdListPtr, "break", HandleBreakCommand, true);
+	CommandList_Add(cmdListPtr, "b", HandleBreakCommand, true);
+	CommandList_Add(cmdListPtr, "combine", HandleCombineCommand, true);
+	CommandList_Add(cmdListPtr, "c", HandleCombineCommand, true);
 	/* return the newly created command list */
 	return commandList;
 }

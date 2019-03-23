@@ -53,6 +53,6 @@ void HandleGoCommand(CommandData *command, GameState *gameState, WorldData *worl
 	Room_Print(currentRoom);
 	if (gameState->currentRoomIndex == 10)
 	{
-		GameState_EndGame(gameState, "Congratulations!  You leave found the vault! \n");
+		GameState_EndGame(gameState, "Congratulations! You found the vault! \n");
 	}
 }

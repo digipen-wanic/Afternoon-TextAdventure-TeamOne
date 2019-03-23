@@ -67,11 +67,11 @@ void HandleCombineCommand(CommandData * command, GameState * gameState, WorldDat
 	}
 
 	/* get the "use" function for this item, if any */
-	useFunc = Item_GetUseFunc(CombinedItem);
+	useFunc = Item_GetCombineFunc(CombinedItem);
 	if (useFunc == NULL)
 	{
 		/* no "use" function was defined, so the item cannot be used - inform the user of the problem and take no action*/
-		printf("You cannot use a %s here.", command->noun);
+		printf("You cannot combine a %s here.", command->noun);
 		return;
 	}
 

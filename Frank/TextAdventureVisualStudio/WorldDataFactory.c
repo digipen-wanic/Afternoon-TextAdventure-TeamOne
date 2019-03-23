@@ -25,6 +25,7 @@ This could be used to create default states as well as loaded state.
 #include "PlaygroundFunctions.h"
 #include "PeanutButterFunctions.h"
 #include "CrunchyPeanutButterFunctions.h"
+#include "DogFunctions.h"
 
 
 
@@ -151,20 +152,23 @@ Room* Room4_Build()
 
 	/* return the new room */
 	return room;
-}
-Room* Room5_Build()
+}Room* Room5_Build()
 {
 	Room* room = NULL;
 
-	room = Room_Create(". \n");
+	room = Room_Create("You see a rundown house with a dog sitting before it.\n");
 
-	/* TODO BASIC: Add exit shortcuts for "e" and "crack" */
+	Room_AddRoomExit(room, "north", 1);
+	Room_AddRoomExit(room, "east", 5);
+	Room_AddRoomExit(room, "south", 7);
 
 	/* TODO REQUIRED: Add a gold piece to the list of items in the room */
+	ItemList_AddItem(Room_GetItemList(room), Dog_Build());
 
 	/* return the new room */
 	return room;
 }
+
 Room* Room6_Build()
 {
 	/* Pre-declare a room pointer which we will use to build the new room */
@@ -209,31 +213,45 @@ Room* Room7_Build()
 	/* Return the new room */
 	return room;
 }
-
 Room* Room8_Build()
 {
-	Room* room = NULL;
+	/* Pre-declare a room pointer which we will use to build the new room */
+	Room* room;
 
-	room = Room_Create(". \n");
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("You see a trail of dog poo leading north. Not much else here...\n");
 
-	/* TODO BASIC: Add exit shortcuts for "e" and "crack" */
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 4);  /* 1 = the room index this exit connects to */
+	Room_AddRoomExit(room, "east", 8);
 
-	/* TODO REQUIRED: Add a gold piece to the list of items in the room */
+	/* Items add items to the room
+	ItemList_AddItem(Room_GetItemList(room), Car_Build()); */
 
-	/* return the new room */
+	/* Return the new room */
 	return room;
 }
 Room* Room9_Build()
 {
-	Room* room = NULL;
+	/* Pre-declare a room pointer which we will use to build the new room */
+	Room* room;
 
-	room = Room_Create(". \n");
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("There's a shady guy who looks like he's selling some powdered candy. Too bad you don't have any money...\n");
 
-	/* TODO BASIC: Add exit shortcuts for "e" and "crack" */
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 5);  /* 1 = the room index this exit connects to */
+	Room_AddRoomExit(room, "east", 9);
+	Room_AddRoomExit(room, "west", 7);
 
-	/* TODO REQUIRED: Add a gold piece to the list of items in the room */
+	/* Items add items to the room
+	ItemList_AddItem(Room_GetItemList(room), Car_Build()); */
 
-	/* return the new room */
+	/* Return the new room */
 	return room;
 }
 /* This room was done by Andrew */
@@ -245,8 +263,8 @@ Room* Room10_Build()
 
 	/* Exits
 	add one or more exits to allow navigation between rooms */
-	Room_AddRoomExit(room, "north", 7);
-	Room_AddRoomExit(room, "west", 9);
+	Room_AddRoomExit(room, "north", 6);
+	Room_AddRoomExit(room, "west", 8);
 
 	/* Items add items to the room */
 	ItemList_AddItem(Room_GetItemList(room), PeanutButter_build());
@@ -273,7 +291,7 @@ WorldData* CreateInitialWorldData()
 
 	/* build each room and assign them to the world data */
 	/* TODO REQUIRED: add rooms 1 and 2 to the world data */
-
+	
 	/* TODO ADVANCED: add additional advanced rooms */
 
 	WorldData_SetRoom(worldData, 0, Room1_Build());

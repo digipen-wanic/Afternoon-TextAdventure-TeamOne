@@ -1,4 +1,4 @@
-/******************************************************************************
+         /******************************************************************************
 filename    BreakCommandHandler.c
 author      Tsering Ngoche
 DP email    N/A
@@ -50,17 +50,17 @@ void HandleBreakCommand(CommandData * command, GameState * gameState, WorldData 
 		return;
 	}
 
-	/* remove the item from inventory and assign the inventory pointer back to the game state */
-	gameState->inventory = ItemList_Remove(gameState->inventory, brokenItem);
 
 	/* everything has succeeded, so output the result */
 	printf("You have broken the %s.\n", command->noun);
 
 	/* get the "drop" function for this item, if any (it is optional) */
-	dropFunc = Item_GetDropFunc(brokenItem);
+	dropFunc = Item_GetBreakFunc(brokenItem);
 	if (dropFunc != NULL)
 	{
 		/* call the drop function with the Inventory context, since that's where the item was */
 		dropFunc(CommandContext_Item_Inventory, gameState, worldData);
 	}
+	/* remove the item from inventory and assign the inventory pointer back to the game state */
+	gameState->inventory = ItemList_Remove(gameState->inventory, brokenItem);
 }

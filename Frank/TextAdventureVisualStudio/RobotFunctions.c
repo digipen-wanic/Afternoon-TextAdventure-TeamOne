@@ -24,5 +24,5 @@ This file defines the functions to create a specific item, the "robot".
 Item* Robot_Build()
 {
 	/* Create a "robot" item, using the functions defined in this file */
-	return Item_Create("robot", "<add description>", false, NULL, NULL, NULL, NULL, NULL);
+	return Item_Create("robot", "It scans the room ominously. ", false, NULL, NULL, NULL, NULL, NULL);
 }

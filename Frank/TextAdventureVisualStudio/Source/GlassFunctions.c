@@ -43,7 +43,7 @@ void Glass_Combine(CommandContext context, GameState* gameState, WorldData* worl
 
 	ItemList_Remove(gameState->inventory, glass);
 	ItemList_Remove(gameState->inventory, peanutButter);
-	ItemList_Add(gameState->inventory, CrunchyPeanutButter_Build());
+	gameState->inventory = ItemList_Add(gameState->inventory, CrunchyPeanutButter_Build());
 	printf("You got the crunchy peanut butter! \n");
 }
 

@@ -88,7 +88,6 @@
     <ClInclude Include="CarFunctions.h" />
     <ClInclude Include="CombineCommandHandler.h" />
     <ClInclude Include="DogFunctions.h" />
-    <ClInclude Include="GlassFunctions.h" />
     <ClInclude Include="McNoodlesFunctions.h" />
     <ClInclude Include="PlaygroundFunctions.h" />
     <ClInclude Include="RobotFunctions.h" />
@@ -107,6 +106,7 @@
     <ClInclude Include="Source\GameFlags.h" />
     <ClInclude Include="Source\GameState.h" />
     <ClInclude Include="Source\GameStateFactory.h" />
+    <ClInclude Include="Source\GlassFunctions.h" />
     <ClInclude Include="Source\GoCommandHandler.h" />
     <ClInclude Include="Source\GoldPieceFunctions.h" />
     <ClInclude Include="Source\HelpCommandHandler.h" />
@@ -123,9 +123,10 @@
     <ClInclude Include="Source\TakeCommandHandler.h" />
     <ClInclude Include="Source\targetver.h" />
     <ClInclude Include="Source\UseCommandHandler.h" />
+    <ClInclude Include="Source\WatchFunctions.h" />
+    <ClInclude Include="Source\WatchPartFunctions.h" />
     <ClInclude Include="Source\WorldData.h" />
     <ClInclude Include="Source\WorldDataFactory.h" />
-    <ClInclude Include="WatchPartFunctions.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BreakCommandHandler.c" />
@@ -133,7 +134,6 @@
     <ClCompile Include="CombineCommandHandler.c" />
     <ClCompile Include="CommandListFactory.c" />
     <ClCompile Include="DogFunctions.c" />
-    <ClCompile Include="GlassFunctions.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="McNoodlesFunctions.c" />
     <ClCompile Include="PlaygroundFunctions.c" />
@@ -148,6 +148,7 @@
     <ClCompile Include="Source\GameFlags.c" />
     <ClCompile Include="Source\GameState.c" />
     <ClCompile Include="Source\GameStateFactory.c" />
+    <ClCompile Include="Source\GlassFunctions.c" />
     <ClCompile Include="Source\GoCommandHandler.c" />
     <ClCompile Include="Source\GoldPieceFunctions.c" />
     <ClCompile Include="Source\HelpCommandHandler.c" />
@@ -163,8 +164,9 @@
     <ClCompile Include="Source\stdafx.c" />
     <ClCompile Include="Source\TakeCommandHandler.c" />
     <ClCompile Include="Source\UseCommandHandler.c" />
+    <ClCompile Include="Source\WatchFunctions.c" />
+    <ClCompile Include="Source\WatchPartFunctions.c" />
     <ClCompile Include="Source\WorldData.c" />
-    <ClCompile Include="WatchPartFunctions.c" />
     <ClCompile Include="WorldDataFactory.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

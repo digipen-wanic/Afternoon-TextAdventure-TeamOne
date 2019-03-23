@@ -17,7 +17,6 @@ This file defines the functions to create a specific item, the "dog".
 #include "ItemList.h" /* ItemList_FindItem, ItemList_Remove, ItemList_Add */
 #include "Item.h" /* Item_Create */
 
-
 /* Helper: The action performed when the brick is taken. */
 void Dog_Take(CommandContext context, GameState* gameState, WorldData* worldData)
 {
@@ -36,7 +35,6 @@ void Dog_Use(CommandContext context, GameState* gameState, WorldData* worldData)
 {
 	Room* room; /* The current room */
 	ItemList** roomItemsPtr; /* The list of items in the current room */
-	Item* dog; /* The dog in the player's inventory */
 
 			   /* safety check on the parameters */
 	if ((gameState == NULL) || (worldData == NULL))
@@ -71,14 +69,12 @@ void Dog_Use(CommandContext context, GameState* gameState, WorldData* worldData)
 		return; /* take no action, as something is wrong - we should always have an item list */
 	}
 
-	/* Find the robot in the player's inventory - it should be there, since we are in the Inventory context */
-	dog = ItemList_FindItem(gameState->inventory, "dog");
-
 	/* Remove the brick from the user's inventory - they won't need it again */
-	gameState->inventory = ItemList_Remove(gameState->inventory, dog);
+	gameState->inventory = ItemList_Add(gameState->inventory, Dog_Build());
 
 	/* Tell the user what they did */
 	printf("The dog runs around the robot and distracts it allowing you to pass.\n");
+	Room_AddRoomExit(room, "north", 0);
 }
 
 

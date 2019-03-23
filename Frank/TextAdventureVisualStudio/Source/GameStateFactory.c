@@ -11,6 +11,8 @@ in this game.
 ******************************************************************************/
 #include "GameStateFactory.h" /* Function declarations */
 #include "GameState.h" /* struct GameState, GameState_Create */
+#include "ItemList.h"
+#include "WatchFunctions.h"
 
 
 /* Create the game state for a new game */
@@ -23,7 +25,7 @@ GameState* CreateInitialGameState()
 
 	/* the user starts with a score of 0 */
 	initialGameState->score = 0;
-
+	initialGameState->inventory = ItemList_Add(initialGameState->inventory, Watch_Build());
 	/* the user starts in room 0 */
 	initialGameState->currentRoomIndex = 5;
 

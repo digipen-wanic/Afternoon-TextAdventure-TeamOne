@@ -84,7 +84,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BreakCommandHandler.h" />
     <ClInclude Include="CarFunctions.h" />
+    <ClInclude Include="CombineCommandHandler.h" />
     <ClInclude Include="DogFunctions.h" />
     <ClInclude Include="GlassFunctions.h" />
     <ClInclude Include="CrunchyPeanutButterFunctions.h" />
@@ -125,7 +127,9 @@
     <ClInclude Include="WatchPartFunctions.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BreakCommandHandler.c" />
     <ClCompile Include="CarFunctions.c" />
+    <ClCompile Include="CombineCommandHandler.c" />
     <ClCompile Include="CommandListFactory.c" />
     <ClCompile Include="CrunchyPeanutButterFunctions.c" />
     <ClCompile Include="DogFunctions.c" />

@@ -16,7 +16,7 @@ This file defines the Item interface, which is used to manage items in the game.
 #define MAX_ITEM_NAME_LENGTH 16 
 
 /* the maximum length of an item's description */
-#define MAX_ITEM_DESCRIPTION_LENGTH 128
+#define MAX_ITEM_DESCRIPTION_LENGTH 2560
 
 
 /* An item in the game */
@@ -28,11 +28,13 @@ typedef struct Item
 	ItemFunc useFunc;	/* a function called when the user uses this item, if any */
 	ItemFunc takeFunc;	/* a function called when the user takes this item, if any */
 	ItemFunc dropFunc;	/* a function called when the user uses this item, if any */
+	ItemFunc combineFunc;
+	ItemFunc breakFunc;
 } Item;
 
 
 /* Create a new Item object with the provided data */
-Item* Item_Create(const char* name, const char* description, bool isCarryable, ItemFunc useFunc, ItemFunc takeFunc, ItemFunc dropFunc)
+Item* Item_Create(const char* name, const char* description, bool isCarryable, ItemFunc useFunc, ItemFunc takeFunc, ItemFunc dropFunc, ItemFunc combineFunc, ItemFunc breakFunc)
 {
 	Item *item; /* the new item to be returned */
 
@@ -59,6 +61,8 @@ Item* Item_Create(const char* name, const char* description, bool isCarryable, I
 	item->useFunc = useFunc;
 	item->takeFunc = takeFunc;
 	item->dropFunc = dropFunc;
+	item->combineFunc = combineFunc;
+	item->breakFunc = breakFunc;
 
 	/* return the new object */
 	return item;
@@ -129,6 +133,21 @@ ItemFunc Item_GetDropFunc(Item* item)
 	return (item != NULL) ? item->dropFunc : NULL;
 }
 
+
+/* Retrieve the "combine" function for this item, if any */
+ItemFunc Item_GetCombineFunc(Item* item)
+{
+	/* return the date if the parameter is not NULL, otherwise return NULL */
+	return (item != NULL) ? item->combineFunc : NULL;
+}
+
+
+/* Retrieve the "break" function for this item, if any */
+ItemFunc Item_GetBreakFunc(Item* item)
+{
+	/* return the date if the parameter is not NULL, otherwise return NULL */
+	return (item != NULL) ? item->breakFunc : NULL;
+}
 
 /* Print a description of the item to standard output */
 void Item_Print(Item* item)

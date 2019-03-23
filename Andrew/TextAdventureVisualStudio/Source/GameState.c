@@ -29,7 +29,8 @@ GameState* GameState_Create()
 
 	/* assign empty values to all members */
 	gameState->score = 0;
-	gameState->currentRoomIndex = 0;
+	gameState->currentRoomIndex = 5;
+	gameState->count = 0;
 	gameState->inventory = NULL;
 	gameState->gameFlags = NULL;
 	gameState->isRunning = true;
@@ -38,7 +39,10 @@ GameState* GameState_Create()
 	return gameState;
 }
 
+int GetCount(GameState* gamestatePtr) {
+	return (gamestatePtr != NULL) ? gamestatePtr->count : NULL;
 
+}
 /* Free the memory associated with a game-state object */
 void GameState_Free(GameState** gameStatePtr)
 {

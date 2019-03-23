@@ -51,4 +51,6 @@ void HandleGoCommand(CommandData *command, GameState *gameState, WorldData *worl
 
 	/* print the description of the new room */
 	Room_Print(currentRoom);
+
+	gameState->count += 1;
 }

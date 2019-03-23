@@ -56,7 +56,6 @@ int main()
 
 		/* accept user input */
 		ParseCommand(GetDefaultInputFunc(), &command);
-
 		/* include an empty line before printing the result of a command */
 		printf("\n");
 

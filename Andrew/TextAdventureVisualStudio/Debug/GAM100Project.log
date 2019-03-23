@@ -1,32 +1,15 @@
 ﻿  WorldDataFactory.c
-  WorldData.c
-  UseCommandHandler.c
-  TakeCommandHandler.c
-  stdafx.c
-  RoomExit.c
-  Room.c
-  QuitCommandHandler.c
-  LookCommandHandler.c
-  ItemList.c
-  Item.c
-  InventoryCommandHandler.c
-  InputProvider.c
-  HelpCommandHandler.c
-  GoldPieceFunctions.c
-  GoCommandHandler.c
-  GameStateFactory.c
+  TimeCommandHandler.c
+c:\users\andrew.y\desktop\textadventurevisualstudio\timecommandhandler.c(19): error C2220: warning treated as error - no 'object' file generated
+c:\users\andrew.y\desktop\textadventurevisualstudio\timecommandhandler.c(19): warning C4100: 'command': unreferenced formal parameter
+  PeanutButterFunctions.c
+c:\users\andrew.y\desktop\textadventurevisualstudio\source\peanutbutterfunctions.c(86): error C2220: warning treated as error - no 'object' file generated
+c:\users\andrew.y\desktop\textadventurevisualstudio\source\peanutbutterfunctions.c(86): warning C4013: 'chunkyButter_Build' undefined; assuming extern returning int
+c:\users\andrew.y\desktop\textadventurevisualstudio\source\peanutbutterfunctions.c(86): warning C4047: 'function': 'Item *' differs in levels of indirection from 'int'
+c:\users\andrew.y\desktop\textadventurevisualstudio\source\peanutbutterfunctions.c(86): warning C4024: 'ItemList_Add': different types for formal and actual parameter 2
   GameState.c
-  GameFlags.c
-  ExitDoorFunctions.c
+c:\users\andrew.y\desktop\textadventurevisualstudio\source\gamestate.c(43): error C2220: warning treated as error - no 'object' file generated
+c:\users\andrew.y\desktop\textadventurevisualstudio\source\gamestate.c(43): warning C4047: ':': 'int' differs in levels of indirection from 'void *'
+  DogFunctions.c
+c:\users\andrew.y\desktop\textadventurevisualstudio\dogfunctions.c(89): error C2197: 'Item_Create': too many arguments for call
   Generating Code...
-  Compiling...
-  EggFunctions.c
-  DropCommandHandler.c
-  CommandList.c
-  CommandHandler.c
-  BrickFunctions.c
-  main.c
-  CommandListFactory.c
-  Generating Code...
-  GAM100Project.vcxproj -> C:\Users\ryan.scheppler\Desktop\GAM100Spring2018\C\Projects\Assignment2-TextAdventure\Debug\GAM100Project.exe
-  GAM100Project.vcxproj -> C:\Users\ryan.scheppler\Desktop\GAM100Spring2018\C\Projects\Assignment2-TextAdventure\Debug\GAM100Project.pdb (Partial PDB)

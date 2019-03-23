@@ -25,6 +25,9 @@ typedef struct GameState
 	/* the user's score */
 	int score;
 
+	/* the user's current turn count */
+	int count;
+
 	/* the user's flags */
 	GameFlags* gameFlags;
 
@@ -49,3 +52,5 @@ void GameState_ChangeScore(GameState* gameState, int modifier);
 
 /* End the game, with appropriate user information */
 void GameState_EndGame(GameState* gameState, const char* message);
+
+int GetCount(GameState* gamestatePtr);

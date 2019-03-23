@@ -143,8 +143,8 @@ Room* Room4_Build()
 	room = Room_Create("you come up to a broken down house, there is an old couch, but it doesnt look too comfy. \n");
 
 	/* TODO BASIC: Add exit shortcuts for "e" and "crack" */
-	Room_AddRoomExit(room, "south", 5);
-	Room_AddRoomExit(room, "east", 3);
+	Room_AddRoomExit(room, "south", 6);
+	Room_AddRoomExit(room, "west", 2);
 	/* TODO REQUIRED: Add a gold piece to the list of items in the room */
 
 	/* return the new room */
@@ -174,10 +174,10 @@ Room* Room6_Build()
 
 	/* Exits
 	add one or more exits to allow navigation between rooms */
-	Room_AddRoomExit(room, "north", 3);  /* 1 = the room index this exit connects to */
-	Room_AddRoomExit(room, "east", 7);
-	Room_AddRoomExit(room, "west", 5);
-	Room_AddRoomExit(room, "south", 9);
+	Room_AddRoomExit(room, "north", 2);  /* 1 = the room index this exit connects to */
+	Room_AddRoomExit(room, "east", 6);
+	Room_AddRoomExit(room, "west", 4);
+	Room_AddRoomExit(room, "south", 8);
 
 	/* Items add items to the room */
 	ItemList_AddItem(Room_GetItemList(room), Car_Build());
@@ -197,9 +197,9 @@ Room* Room7_Build()
 
 	/* Exits
 	add one or more exits to allow navigation between rooms */
-	Room_AddRoomExit(room, "north", 4);  /* 1 = the room index this exit connects to */
-	Room_AddRoomExit(room, "west", 6);
-	Room_AddRoomExit(room, "south", 10);
+	Room_AddRoomExit(room, "north", 3);  /* 1 = the room index this exit connects to */
+	Room_AddRoomExit(room, "west", 5);
+	Room_AddRoomExit(room, "south", 9);
 
 	/* Items add items to the room */
 	ItemList_AddItem(Room_GetItemList(room), Mcnoodles_Build());
